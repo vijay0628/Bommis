@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover bridal makeup, salon services, saree draping and beauty services at Bommis Bridal Studio. Request your appointment online.">
+<title>Bommis Salon Sevice At Home</title>
+<style>
+:root {
+  --site-primary: #7C6256;
+  --site-on-primary: #ffffff;
+  --site-secondary: #A9B6A0;
+  --site-on-secondary: #303A32;
+  --site-background: #FAF8F1;
+  --site-on-background: #303A32;
+  --site-font-body: 'Arial', 'Helvetica Neue', sans-serif;
+  --site-font-heading: 'Georgia', 'Times New Roman', serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  --muted: #746d65;
+  --line: #e4ddd1;
+  --surface: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: light-dark(#fffaf8,#181415); color: light-dark(var(--site-on-background),#f7eeec); font-family: var(--site-font-body); }
+#app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); border-radius: 0; overflow: hidden; }
+button, input, select, textarea { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button, .button { border: 0; cursor: pointer; }
+.nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px clamp(18px,5vw,76px); background:var(--surface); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:10; }
+.brand { display:flex; align-items:center; gap:10px; min-width:max-content; }
+.brand-mark { color:var(--site-primary); font-size:30px; line-height:1; }
+.brand-name { font-family:var(--site-font-heading); font-size:29px; line-height:1; letter-spacing:-1px; }
+.brand-tag { display:block; margin-top:4px; font-size:8px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; }
+.nav-links { display:flex; gap:clamp(12px,2vw,27px); align-items:center; font-size:13px; color:#55494a; }
+.nav-links a:hover { color:var(--site-primary); }
+.button { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:13px 20px; border-radius:9px; background:var(--site-primary); color:var(--site-on-primary); font-weight:700; font-size:14px; transition:transform .15s, opacity .15s; }
+.button:hover { opacity:.92; transform:translateY(-1px); }
+.button.secondary { background:transparent; color:var(--site-primary); border:1px solid var(--site-primary); }
+.hero { display:grid; grid-template-columns:1fr 1fr; min-height:470px; background:#D8C4A4; }
+.hero-copy { padding:clamp(34px,6vw,86px); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+.eyebrow { text-transform:uppercase; letter-spacing:3px; font-size:11px; color:var(--site-primary); font-weight:700; margin:0 0 16px; }
+h1,h2,h3 { font-family:var(--site-font-heading); font-weight:500; letter-spacing:-.7px; }
+h1 { font-size:clamp(42px,5.4vw,70px); line-height:1.03; margin:0 0 18px; }
+.hero-copy p { max-width:440px; color:#584748; line-height:1.7; margin:0 0 25px; }
+.hero-image { min-height:390px; background:#d8b8aa; position:relative; }
+.hero-image img { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; }
+.trust-row { display:flex; flex-wrap:wrap; gap:18px; margin-top:23px; font-size:12px; color:#594849; }
+.trust-row span::before { content:'✓'; color:var(--site-primary); font-weight:bold; margin-right:7px; }
+.section { padding:70px clamp(18px,5vw,76px); }
+.section-head { text-align:center; margin:0 auto 34px; max-width:650px; }
+.section-head .eyebrow { margin-bottom:10px; }
+h2 { font-size:clamp(30px,3.5vw,43px); line-height:1.12; margin:0 0 12px; }
+.section-head p { color:var(--muted); line-height:1.65; margin:0; }
+.service-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.service-card { border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--surface); transition:transform .18s, box-shadow .18s; }
+.service-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px #6b374011; }
+.service-photo { height:165px; overflow:hidden; background:#f1dfda; }
+.service-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.service-info { padding:18px; }
+.service-info h3 { font-size:22px; margin:0 0 8px; }
+.service-info p { color:var(--muted); font-size:13px; line-height:1.5; min-height:39px; margin:0 0 15px; }
+.price-row { display:flex; justify-content:space-between; align-items:center; gap:8px; font-weight:700; }
+.price { color:var(--site-primary); }
+.small-link { color:var(--site-primary); font-size:13px; font-weight:700; background:none; padding:6px 0; }
+.benefits { background:#A9B6A0; color:#303A32; }
+.benefit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:26px; text-align:center; }
+.benefit { padding:16px; }
+.benefit-icon { width:48px; height:48px; margin:0 auto 15px; display:grid; place-items:center; border-radius:50%; background:#f1d8d9; color:var(--site-primary); font-size:22px; }
+.benefit h3 { font-size:21px; margin:0 0 8px; }
+.benefit p { color:var(--muted); font-size:13px; line-height:1.6; margin:0; }
+.gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.gallery-grid img { width:100%; height:220px; object-fit:cover; border-radius:12px; background:#f1dfda; }
+.cta-band { margin:0 clamp(18px,5vw,76px) 70px; padding:36px clamp(20px,4vw,55px); background:var(--site-primary); color:#fff; border-radius:16px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.cta-band h2 { font-size:32px; margin-bottom:7px; }
+.cta-band p { margin:0; color:#f9e8e9; font-size:14px; }
+.cta-band .button { background:#fff; color:var(--site-primary); white-space:nowrap; }
+footer { background:#2f2224; color:#f9efed; padding:35px clamp(18px,5vw,76px); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:13px; }
+footer p { color:#d4c2c2; margin:7px 0 0; }
+/* Booking view */
+.booking-hero { min-height:235px; position:relative; display:flex; align-items:center; padding:40px clamp(20px,6vw,86px); color:white; background:linear-gradient(90deg,#261719ed,#381c22a8), url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1800&q=80') center 40%/cover; }
+.booking-hero .eyebrow { color:#f3c6c8; }
+.booking-hero h1 { font-size:clamp(36px,4vw,52px); margin-bottom:10px; }
+.booking-hero p { margin:0; color:#f5e9e8; line-height:1.6; }
+.booking-layout { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(300px,.85fr); gap:24px; padding:35px clamp(18px,5vw,76px) 70px; align-items:start; }
+.panel { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px; }
+.panel h2 { font-size:27px; margin-bottom:5px; }
+.panel-intro { color:var(--muted); font-size:13px; margin:0 0 20px; }
+.category-grid { display:flex; align-items:center; gap:7px; margin:16px 0 20px; padding:5px; overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:#faf6f2; scrollbar-width:thin; }
+.category-tile { display:inline-flex; flex:0 0 auto; align-items:center; justify-content:center; gap:7px; width:auto; min-height:0; padding:11px 13px; white-space:nowrap; text-align:center; color:var(--muted); background:transparent; border:1px solid transparent; border-radius:8px; font-size:13px; font-weight:700; transition:background .18s,border-color .18s,color .18s; }
+.category-tile:hover { color:var(--site-primary); background:#fff; border-color:var(--line); }
+.category-tile.active { color:var(--site-on-primary); background:var(--site-primary); border-color:var(--site-primary); }
+.category-tile:focus-visible { outline:3px solid #7c625655; outline-offset:2px; }
+.category-icon { display:inline-grid; place-items:center; width:20px; height:20px; flex:0 0 auto; font-size:16px; }
+.category-tile strong { font-family:var(--site-font-body); font-size:13px; font-weight:700; line-height:1.2; }
+.category-tile small, .category-arrow { display:none; }
+.booking-services { display:grid; gap:10px; }
+.service-tools { display:grid; grid-template-columns:minmax(0,7fr) minmax(110px,3fr); gap:9px; margin:0 0 13px; }
+.search-wrap { position:relative; min-width:0; }
+.search-wrap input { width:100%; padding-right:38px; }
+.search-clear { position:absolute; right:7px; top:50%; transform:translateY(-50%); width:28px; height:28px; display:grid; place-items:center; padding:0; border-radius:50%; background:transparent; color:var(--muted); font-size:20px; line-height:1; }
+.search-clear:hover { background:#f3e8e5; color:var(--site-primary); }
+.service-tools input,.service-tools select { width:100%; min-width:0; border:1px solid #dfd0ce; border-radius:8px; padding:11px 12px; background:#fffdfc; color:#302426; }
+.service-tools .clear-selection { padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--site-primary); font-weight:700; white-space:nowrap; }
+.selection-count { display:flex; justify-content:space-between; gap:10px; color:var(--muted); font-size:12px; margin:-3px 0 12px; }
+.calendar-hint { grid-column:1/-1; color:var(--muted); font-size:11px; line-height:1.45; margin-top:-4px; }
+.slot-status { color:var(--muted); font-size:11px; line-height:1.45; margin-top:6px; }
+.slot-status.warning { color:#a12638; }
+.no-services { border:1px dashed var(--line); border-radius:10px; padding:22px; text-align:center; color:var(--muted); font-size:13px; }
+.booking-service { display:flex; align-items:center; gap:13px; padding:12px; border:1px solid var(--line); border-radius:11px; cursor:pointer; transition:background .15s,border-color .15s; }
+.booking-service.selected { background:#fbefef; border-color:var(--site-primary); }
+.booking-service input { accent-color:var(--site-primary); width:18px; height:18px; flex:0 0 auto; }
+.booking-service img { width:58px; height:58px; object-fit:cover; border-radius:9px; background:#f1dfda; }
+.booking-service .service-label { flex:1; min-width:0; }
+.booking-service strong { display:block; font-size:14px; margin-bottom:4px; }
+.booking-service small { color:var(--muted); font-size:12px; }
+.booking-service .price { white-space:nowrap; font-size:14px; font-weight:700; }
+.right-stack { display:grid; gap:17px; position:sticky; top:94px; }
+.summary-line { display:flex; justify-content:space-between; gap:12px; font-size:14px; margin:12px 0; }
+.summary-line.total { border-top:1px solid var(--line); padding-top:16px; margin-top:17px; font-size:19px; font-weight:700; }
+.minimum-order-notice { padding:11px 12px; margin:12px 0; border-radius:8px; background:#faf3e7; color:#70522d; font-size:12px; line-height:1.5; }
+.minimum-order-notice.met { background:#edf5ec; color:#315c38; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+.field { display:flex; flex-direction:column; gap:7px; min-width:0; }
+#returnAddressField[hidden] { display:none !important; }
+.field.full { grid-column:1/-1; }
+.field label { font-size:12px; font-weight:700; color:#5a484a; }
+.field input,.field select,.field textarea { width:100%; border:1px solid #dfd0ce; border-radius:8px; padding:12px; background:#fffdfc; color:#302426; outline:none; }
+.field input:focus,.field select:focus,.field textarea:focus { border-color:var(--site-primary); box-shadow:0 0 0 3px #a84e6119; }
+.field textarea { min-height:75px; resize:vertical; }
+.checkout-button { width:100%; margin-top:16px; }
+.checkout-button:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+.notice { color:var(--muted); font-size:11px; text-align:center; line-height:1.5; margin:12px 0 0; }
+.error { color:#a12638; font-size:12px; margin-top:9px; display:none; }
+.back-link { display:inline-flex; gap:7px; align-items:center; color:var(--site-primary); font-weight:700; font-size:13px; margin-bottom:18px; background:none; }
+.mobile-menu { display:none; }
+@media(max-width:900px) { .nav-links { gap:12px; font-size:12px; } .service-grid { grid-template-columns:repeat(2,1fr); } .booking-layout { grid-template-columns:1fr; } .right-stack { position:static; } .hero { grid-template-columns:1fr 1fr; } .hero-copy { padding:35px; } }
+@media(max-width:650px) { .nav { padding:14px 18px; } .brand-name { font-size:25px; } .nav-links a:not(.button) { display:none; } .nav-links .button { padding:11px 13px; font-size:12px; } .hero { grid-template-columns:1fr; } .hero-copy { padding:42px 23px; } .hero-image { min-height:300px; } .trust-row { gap:11px; } .section { padding:48px 18px; } .service-grid { gap:11px; } .service-photo { height:130px; } .service-info { padding:13px; } .service-info h3 { font-size:18px; } .service-info p { font-size:12px; min-height:52px; } .price-row { font-size:13px; } .benefit-grid { grid-template-columns:1fr; gap:5px; } .gallery-grid { grid-template-columns:repeat(2,1fr); } .gallery-grid img { height:155px; } .cta-band { margin:0 18px 45px; flex-direction:column; align-items:flex-start; } .booking-layout { padding:23px 14px 45px; } .panel { padding:17px; } .category-grid { gap:4px; margin:13px 0 17px; } .category-tile { padding:10px 11px; font-size:12px; } .category-tile strong { font-size:12px; } .service-tools { grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:7px; } .booking-service { gap:9px; padding:9px; } .booking-service img { width:48px; height:48px; } .booking-service small { font-size:11px; } .booking-service .price { font-size:12px; } .form-grid { grid-template-columns:1fr; } .field.full { grid-column:auto; } footer { padding:28px 20px; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Bommis salon  home" onclick="showHome()"><span class="brand-mark">❀</span><span><span class="brand-name">Salon Sevice At Home</span><span class="brand-tag">Bridal beauty & styling</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home" onclick="showHome()">Home</a><a href="#services" onclick="showHome()">Services</a><a href="#about" onclick="showHome()">About</a><a href="#gallery" onclick="showHome()">Gallery</a><a href="#contact" onclick="showHome()">Contact</a>
+      <button class="button" onclick="showBooking()">Book Now ↗</button>
+    </nav>
+  </header>
+  <main id="homePage">
+    <section class="hero" id="home">
+      <div class="hero-copy"><div class="eyebrow">Bridal & beauty services</div><h1>Look Beautiful.<br>Feel Confident.</h1><p>Professional bridal makeup, salon treatments, saree draping and beauty services for weddings, celebrations, and every special occasion.</p><button class="button" onclick="showBooking()">Book your appointment <span>→</span></button><div class="trust-row"><span>Premium products</span><span>Hygienic & safe</span><span>Personalised looks</span></div></div>
+      <div class="hero-image"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85" alt="Beauty portrait representing a special occasion makeup look"></div>
+    </section>
+    <section class="section" id="services"><div class="section-head"><div class="eyebrow">Our services</div><h2>Beauty for Every Occasion</h2><p>Choose a service that suits your style. Select one or more options to see your estimated total before requesting a booking.</p></div><div class="service-grid" id="serviceCards"></div></section>
+    <section class="section benefits" id="about"><div class="section-head"><div class="eyebrow">Why choose Bommis Salon Sevice At Home</div><h2>Your Beauty, Our Passion</h2><p>A thoughtful, personalised experience from consultation to your final look.</p></div><div class="benefit-grid"><div class="benefit"><div class="benefit-icon">✧</div><h3>Experienced professionals</h3><p>Looks tailored to your occasion, style and preferences.</p></div><div class="benefit"><div class="benefit-icon">♡</div><h3>Personalised consultation</h3><p>Discuss your needs before the appointment so we can prepare.</p></div><div class="benefit"><div class="benefit-icon">✿</div><h3>Care in every detail</h3><p>Careful product selection and a comfortable beauty experience.</p></div></div></section>
+    <section class="section" id="gallery"><div class="section-head"><div class="eyebrow">Our work</div><h2>Beauty Looks to Inspire You</h2><p>Explore a few beauty inspirations and tell us the look you have in mind.</p></div><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=650&q=80" alt="Makeup beauty portrait"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=650&q=80" alt="Wedding celebration inspiration"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=650&q=80" alt="Hair and beauty inspiration"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=650&q=80" alt="Beauty products and tools"></div></section>
+    <section class="cta-band" id="contact"><div><h2>Ready to look your best?</h2><p>Tell us what you need and request an appointment today.</p><p>Call or WhatsApp: <a href="https://wa.me/919940148844">9940148844</a> · <a href="mailto:bommisbridalstudio@gmail.com">bommisbridalstudio@gmail.com</a></p><p>28/20, Ramapuram Ramasamy Street, Saidapet, Chennai - 15</p></div><button class="button" onclick="showBooking()">Book an appointment →</button></section>
+  </main>
+  <main id="bookingPage" hidden>
+    <section class="booking-hero"><div><div class="eyebrow">Bommis Salon Service At Home</div><h1>What would you like to book?</h1><p>Choose a service category to explore treatments and prices, then request your preferred appointment.</p></div></section>
+    <section class="booking-layout"><div><button class="back-link" onclick="showHome()">← Back to salon</button><div class="panel"><h2>Choose a category</h2><p class="panel-intro">Select a category below to view its services and prices.</p><div class="category-grid" id="categoryGrid" role="group" aria-label="Service categories"></div><div id="categoryServices"><h2 id="categoryTitle">Salon services</h2><p class="panel-intro" id="categoryIntro">Select one or more services.</p><div class="booking-services" id="bookingServices"></div></div></div></div>
+      <aside class="right-stack"><div class="panel"><h2>Your selection</h2><div id="selectedSummary"><p class="panel-intro" style="margin-top:12px">Choose a service to begin.</p></div><div class="summary-line total"><span>Total estimate</span><span id="totalPrice">₹0</span></div></div>
+      <form class="panel" id="bookingForm"><h2>Your appointment</h2><p class="panel-intro">Your request is not confirmed until we contact you.</p><div class="form-grid"><div class="field full"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Enter your name" required></div><div class="field full"><label for="phone">WhatsApp / phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 98765 43210" pattern="[0-9+()\\s-]{8,18}" required></div><div class="field full"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="date">Preferred date *</label><input id="date" name="date" type="date" required></div><div class="field"><label for="time">Preferred time *</label><select id="time" name="time" required><option value="">Choose time</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option><option>06:00 PM</option></select></div><div class="field full" id="returnAddressField" hidden><label for="returnAddress">Address to return/post your saree *</label><textarea id="returnAddress" name="returnAddress" autocomplete="street-address" placeholder="House/flat, street, area, city, PIN code"></textarea><small class="slot-status">Required when booking saree draping or saree box pleating.</small></div><div class="field full"><label for="notes">Additional notes (optional)</label><textarea id="notes" name="notes" placeholder="Occasion, preferred look, venue, etc."></textarea></div></div><div class="error" id="formError" role="alert">Please select at least one service and complete the required fields.</div><button class="button checkout-button" type="submit">Send booking request via WhatsApp ↗</button><p class="notice">No payment is taken on this demo. We'll open WhatsApp with your request ready to send. Appointment timing and final price need confirmation.</p></form></aside>
+    </section>
+  </main>
+  <footer><div><div class="brand"><span class="brand-mark">❀</span><span><span class="brand-name">Bommis Salon Sevice At Home</span><span class="brand-tag">Bridal beauty & styling</span></span></div><p>Beauty services for your special moments.</p></div><div><strong>Contact & appointments</strong><p><a href="mailto:bommisbridalstudio@gmail.com">bommisbridalstudio@gmail.com</a></p><p>28/20, Ramapuram Ramasamy Street,<br>Saidapet, Chennai - 15</p></div><div><strong>Hours</strong><p>By appointment · Please confirm availability</p><p>© <span id="year"></span> Bommis Salon Sevice At Home</p></div></footer>
+</div>
+<script>
+const WHATSAPP_NUMBER = '919940148844'; // Business WhatsApp number, country code included
+const categories = [
+ {id:'salon',name:'Salon services',description:'Waxing, facials, mani-pedi, hair care and more',icon:'✦'},
+ {id:'saree',name:'Saree draping',description:'Traditional and occasion saree styling',icon:'❋'},
+ {id:'bridal',name:'Bridal makeup',description:'Bridal and reception looks',icon:'♡'},
+ {id:'makeup',name:'Party makeup',description:'Makeup for parties and special events',icon:'✧'},
+ {id:'hair-style',name:'Hairstyling',description:'Elegant hairstyles for every occasion',icon:'❀'}
+];
+const services = [
+  {id:'rica-tin-full',name:'Rica tin wax — full arms & full legs (including underarm)',description:'Rica and Aquagel waxing options',price:1248.75,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'rica-rollon-full',name:'Rica roll-on wax — full arms & full legs (including underarm)',description:'Rica and Aquagel waxing options',price:1436.25,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wax-arms',name:'Waxing — Full arms (including underarms)',description:'Waxing service; wax type confirmed at booking',price:769,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wax-legs',name:'Waxing — Full legs',description:'Waxing service; wax type confirmed at booking',price:689,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wax-half-legs',name:'Waxing — Half legs',description:'Wax type confirmed at booking',price:419,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wax-back',name:'Waxing — Back',description:'Wax type confirmed at booking',price:699,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wax-stomach',name:'Waxing — Stomach',description:'Wax type confirmed at booking',price:649,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wax-full-body',name:'Waxing — Full body',description:'Wax type confirmed at booking',price:1699,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'facial-o3',name:'O3+ power brightening facial',description:'Brightening facial',price:2099,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'facial-shine',name:'O3+ shine & glow facial',description:'Glow facial',price:1849,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'facial-korean-glow',name:'Korean Glow facial',description:'Glow facial',price:1399,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'facial-wine',name:'Firming wine glow facial',description:'Firming glow facial',price:1349,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'foot-massage-10',name:'Foot massage (10 mins)',description:'Foot massage',price:249,category:'salon',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'foot-massage-20',name:'Foot massage (20 mins)',description:'Foot massage',price:499,category:'salon',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-color',name:'Hair color application',description:'Hair color application',price:399,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'henna',name:'Henna mehendi application',description:'Henna application',price:499,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'head-massage-10',name:'Head massage (10 mins)',description:'Head massage',price:249,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'head-massage-20',name:'Head massage (20 mins)',description:'Head massage',price:449,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-arms',name:'Bleach & detan — full arms',description:'Bleach service',price:549,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-legs',name:'Bleach & detan — full legs',description:'Detan service',price:699,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-back',name:'Bleach & detan — back',description:'Detan service',price:549,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-chest',name:'Bleach & detan — chest',description:'Detan service',price:549,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-brow',name:'Threading — eyebrow',description:'Facial hair removal',price:59,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-lip',name:'Threading — upper lip',description:'Facial hair removal',price:59,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-forehead',name:'Threading — forehead',description:'Facial hair removal',price:59,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-sidelocks',name:'Threading — sidelocks',description:'Facial hair removal',price:49,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-chin',name:'Threading — chin',description:'Facial hair removal',price:49,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-jaw',name:'Facial hair removal — jawline',description:'Facial hair removal',price:99,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-neck',name:'Facial hair removal — neck',description:'Facial hair removal',price:199,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'thread-face',name:'Facial hair removal — face',description:'Facial hair removal',price:499,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'bridal',name:'Bridal Makeup',description:'Complete bridal makeover',price:8000,category:'bridal',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
+  {id:'reception',name:'Reception Makeup',description:'Glamorous evening look',price:5000,category:'bridal',image:'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=350&q=80'},
+  {id:'party',name:'Party Makeup',description:'For weddings, receptions and events',price:3000,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair',name:'Hairstyling',description:'Elegant and modern hairstyles',price:1500,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'drape',name:'Saree draping',description:'Traditional and occasion saree styling',price:799,category:'saree',image:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=350&q=80'},
+  {id:'saree-box-pleating',name:'Saree box pleating',description:'Saree box pleating service',price:249,category:'saree',image:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=350&q=80'},
+  {id:'party-bronze',name:'Party makeup — Bronze package',description:'Basic-range products, basic hairstyle and makeover',price:1999,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
+  {id:'party-silver',name:'Party makeup — Silver package',description:'Professional products, good hairstyle, makeover and saree/lehenga draping',price:3999,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
+  {id:'party-gold',name:'Party makeup — Gold HD package',description:'HD products, advanced hairstyle, saree draping and makeover',price:5999,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-blow-dry',name:'Blow dry',description:'Professional blow-dry styling',price:599,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-temporary-straightening',name:'Temporary straightening',description:'Temporary straightened hairstyle',price:699,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-curls',name:'Curls',description:'Temporary curls styling',price:699,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-advance-curls',name:'Advanced curls',description:'Advanced curls hairstyle',price:999,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'haircut-basic',name:'Basic haircut',description:'Basic haircut service',price:249,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'haircut-advanced',name:'Advanced haircut',description:'Advanced haircut and styling',price:699,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-spa-mid',name:'Hair spa — up to mid length',description:'Hair spa for hair up to mid length',price:799,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
+  {id:'hair-spa-hip',name:'Hair spa — hip length',description:'Hair spa for hip-length hair',price:999,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'}
+];
+const money = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(Math.round(n*0.8));
+const selected = new Set();
+let activeCategory = null;
+function showBooking(){ document.getElementById('homePage').hidden=true; document.getElementById('bookingPage').hidden=false; showCategories(); window.scrollTo({top:0,behavior:'smooth'}); }
+function showHome(){ document.getElementById('bookingPage').hidden=true; document.getElementById('homePage').hidden=false; window.scrollTo({top:0,behavior:'smooth'}); }
+function showCategories(){ activeCategory='salon'; document.getElementById('categoryGrid').hidden=false; document.getElementById('categoryServices').hidden=false; document.getElementById('categoryGrid').innerHTML=categories.map(c=>`<button type="button" class="category-tile ${c.id===activeCategory?'active':''}" aria-pressed="${c.id===activeCategory}" onclick="openCategory('${c.id}')"><span class="category-icon">${c.icon}</span><strong>${c.name}</strong></button>`).join(''); const category=categories.find(c=>c.id===activeCategory); document.getElementById('categoryTitle').textContent=category.name; document.getElementById('categoryIntro').textContent='Select one or more services. Prices are based on the supplied reference images and should be confirmed before launch.'; renderBookingServices(); }
+function openCategory(id){ activeCategory=id; const category=categories.find(c=>c.id===id); document.getElementById('categoryGrid').hidden=false; document.getElementById('categoryGrid').innerHTML=categories.map(c=>`<button type="button" class="category-tile ${c.id===activeCategory?'active':''}" aria-pressed="${c.id===activeCategory}" onclick="openCategory('${c.id}')"><span class="category-icon">${c.icon}</span><strong>${c.name}</strong></button>`).join(''); document.getElementById('categoryServices').hidden=false; document.getElementById('categoryTitle').textContent=category.name; document.getElementById('categoryIntro').textContent='Select one or more services. Prices are based on the supplied reference images and should be confirmed before launch.'; renderBookingServices(); renderSummary(); }
+function renderCards(){
+ document.getElementById('serviceCards').innerHTML=categories.slice(0,4).map(c=>{const s=services.find(x=>x.category===c.id);return `<article class="service-card"><div class="service-photo"><img src="${s?s.image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'}" alt="${c.name}" loading="lazy"></div><div class="service-info"><h3>${c.name}</h3><p>${c.description}</p><div class="price-row"><span class="price">${s?'From '+money(s.price):'View options'}</span><button class="small-link" onclick="showBooking();openCategory('${c.id}')">Explore →</button></div></div></article>`}).join('');
+}
+function setupSmartSelection(){
+ const list=document.getElementById('bookingServices');
+ if(document.getElementById('serviceSearch')) return;
+ const tools=document.createElement('div'); tools.className='service-tools'; tools.innerHTML='<div class="search-wrap"><input id="serviceSearch" type="search" placeholder="Search services…" aria-label="Search services"><button type="button" class="search-clear" id="clearSearch" aria-label="Clear search" title="Clear search" hidden>×</button></div><select id="serviceSort" aria-label="Filter and sort services"><option value="default">Filter: Recommended</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select>';
+ list.parentNode.insertBefore(tools,list);
+ const count=document.createElement('div'); count.className='selection-count'; count.id='selectionCount'; list.parentNode.insertBefore(count,list);
+ document.getElementById('serviceSearch').addEventListener('input',renderBookingServices);
+ document.getElementById('serviceSort').addEventListener('change',renderBookingServices);
+ const searchInput=document.getElementById('serviceSearch'); const clearSearch=document.getElementById('clearSearch');
+ searchInput.addEventListener('input',()=>{clearSearch.hidden=!searchInput.value;renderBookingServices();});
+ clearSearch.addEventListener('click',()=>{searchInput.value='';clearSearch.hidden=true;searchInput.focus();renderBookingServices();});
+}
+function renderBookingServices(){
+ setupSmartSelection();
+ const query=(document.getElementById('serviceSearch')?.value||'').trim().toLowerCase();
+ const clearSearch=document.getElementById('clearSearch'); if(clearSearch) clearSearch.hidden=!query;
+ const sort=document.getElementById('serviceSort')?.value||'default';
+ let shown=services.filter(s=>s.category===activeCategory&&(!query||(s.name+' '+s.description).toLowerCase().includes(query)));
+ if(sort==='price-low') shown.sort((a,b)=>a.price-b.price); else if(sort==='price-high') shown.sort((a,b)=>b.price-a.price); else if(sort==='name') shown.sort((a,b)=>a.name.localeCompare(b.name));
+ document.getElementById('selectionCount').innerHTML=`<span>${shown.length} service${shown.length===1?'':'s'} shown</span><span>${services.filter(s=>selected.has(s.id)).length} selected across categories</span>`;
+ document.getElementById('bookingServices').innerHTML=shown.length?shown.map(s=>`<label class="booking-service ${selected.has(s.id)?'selected':''}"><input type="checkbox" value="${s.id}" ${selected.has(s.id)?'checked':''} aria-label="Select ${s.name}"><img src="${s.image}" alt="" loading="lazy"><span class="service-label"><strong>${s.name}</strong><small>${s.description}</small></span><span class="price">${money(s.price)}</span></label>`).join(''):'<div class="no-services">No services match your search. Try another name.</div>';
+ document.querySelectorAll('.booking-service input').forEach(input=>input.addEventListener('change',()=>{if(input.checked)selected.add(input.value);else selected.delete(input.value);renderBookingServices();renderSummary();}));
+}
+function renderSummary(){
+ const items=services.filter(s=>selected.has(s.id));
+ document.getElementById('selectedSummary').innerHTML=items.length?items.map(s=>`<div class="summary-line"><span>${s.name}</span><strong>${money(s.price)}</strong></div>`).join(''):'<p class="panel-intro" style="margin-top:12px">Choose a service to begin.</p>';
+ const total=items.reduce((sum,s)=>sum+s.price,0);
+ document.getElementById('totalPrice').textContent=money(total);
+ const sendButton=document.querySelector('#bookingForm .checkout-button');
+ sendButton.disabled=total<=600;
+ sendButton.setAttribute('aria-disabled',String(total<=600));
+ let notice=document.getElementById('minimumOrderNotice');
+ if(!notice){notice=document.createElement('div');notice.id='minimumOrderNotice';notice.className='minimum-order-notice';notice.setAttribute('role','status');document.getElementById('totalPrice').closest('.summary-line').after(notice);}
+ notice.classList.toggle('met',total>600);
+ const displayedTotal=Math.round(total*0.8);
+ sendButton.disabled=displayedTotal<=600;
+ sendButton.setAttribute('aria-disabled',String(displayedTotal<=600));
+ notice.classList.toggle('met',displayedTotal>600);
+ notice.textContent=displayedTotal>600?'Minimum order requirement met. You can continue with your booking.':'Minimum order value must be more than ₹600. Add another service to continue.';
+}
+function addAndBook(id){ selected.add(id); renderBookingServices(); renderSummary(); showBooking(); }
+function updateAppointmentSlots(){
+ const date=document.getElementById('date').value; const timeSelect=document.getElementById('time'); const status=document.getElementById('slotStatus');
+ const previous=timeSelect.value; const slots=['09:00 AM','10:00 AM','11:00 AM','12:00 PM','01:00 PM','02:00 PM','03:00 PM','04:00 PM','05:00 PM','06:00 PM'];
+ const now=new Date(); const chosen=date?new Date(date+'T00:00:00'):null; const isToday=chosen&&chosen.toDateString()===now.toDateString();
+ timeSelect.innerHTML='<option value="">Choose available time</option>';
+ slots.forEach(label=>{const match=label.match(/^(\d{2}):00 (AM|PM)$/);let hour=Number(match[1])%12+(match[2]==='PM'?12:0);const option=document.createElement('option');option.value=label;option.textContent=label;option.disabled=Boolean(isToday&&hour<=now.getHours());timeSelect.appendChild(option);});
+ if(previous&&Array.from(timeSelect.options).some(o=>o.value===previous&&!o.disabled))timeSelect.value=previous;
+ if(!date){status.textContent='Choose a date to check the available time options.';status.classList.remove('warning');}
+ else if(isToday&&Array.from(timeSelect.options).every(o=>!o.value||o.disabled)){status.textContent='No remaining demo time slots today. Please choose another date.';status.classList.add('warning');}
+ else {status.textContent='Demo availability: past times are disabled for today. Final availability must be confirmed by the studio.';status.classList.remove('warning');}
+}
+document.getElementById('date').addEventListener('change',updateAppointmentSlots);
+const timeField=document.getElementById('time').closest('.field'); const slotStatus=document.createElement('div'); slotStatus.id='slotStatus'; slotStatus.className='slot-status'; timeField.appendChild(slotStatus);
+updateAppointmentSlots();
+document.getElementById('bookingForm').addEventListener('submit',function(event){
+ const total=services.filter(s=>selected.has(s.id)).reduce((sum,s)=>sum+s.price,0);
+ if(Math.round(total*0.8)<=600){event.preventDefault();event.stopImmediatePropagation();const err=document.getElementById('formError');err.textContent='Minimum order value must be more than ₹600. Please add another service before continuing.';err.style.display='block';document.getElementById('minimumOrderNotice').scrollIntoView({behavior:'smooth',block:'center'});}
+},true);
+document.getElementById('bookingForm').addEventListener('submit',function(event){
+ event.preventDefault(); const err=document.getElementById('formError');
+ if(!selected.size || !this.reportValidity()){err.style.display='block';return;} err.style.display='none';
+ const data=new FormData(this); const items=services.filter(s=>selected.has(s.id)); const total=items.reduce((sum,s)=>sum+s.price,0); const needsReturnAddress=items.some(s=>s.category==='saree');
+ if(needsReturnAddress&&!String(data.get('returnAddress')||'').trim()){document.getElementById('returnAddress').setCustomValidity('Please enter the address for returning/posting your saree.');document.getElementById('returnAddress').reportValidity();return;} document.getElementById('returnAddress').setCustomValidity('');
+ const message=`Hello Bommis Salon Sevice At Home! I'd like to request an appointment.\n\nName: ${data.get('fullName')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')||'Not provided'}\nDate: ${data.get('date')}\nTime: ${data.get('time')}\nServices: ${items.map(s=>s.name+' ('+money(s.price)+')').join(', ')}\nEstimated total: ${money(total)}\n${needsReturnAddress?'Saree return/postal address: '+data.get('returnAddress')+'\n':''}Notes: ${data.get('notes')||'None'}\n\nPlease confirm availability and final price.`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer');
+});
+const dateInput=document.getElementById('date'); const today=new Date(); dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split('T')[0];
+function updateReturnAddressField(){const needsAddress=services.some(s=>selected.has(s.id)&&s.category==='saree');const field=document.getElementById('returnAddressField');const input=document.getElementById('returnAddress');field.hidden=!needsAddress;input.required=needsAddress;if(!needsAddress)input.setCustomValidity('');}
+const originalRenderSummary=renderSummary;
+renderSummary=function(){originalRenderSummary();updateReturnAddressField();};
+document.getElementById('phone').value='';
+document.getElementById('date').addEventListener('change',updateAppointmentSlots);
+document.getElementById('year').textContent=new Date().getFullYear(); renderCards(); showCategories(); renderSummary();
+</script>
+</body>
+</html>

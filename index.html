@@ -31,9 +31,11 @@ button, input, select, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 button, .button { border: 0; cursor: pointer; }
 .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px clamp(18px,5vw,76px); background:var(--surface); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:10; }
-.brand { display:flex; align-items:center; gap:10px; min-width:max-content; }
+.brand { display:flex; align-items:center; gap:11px; min-width:0; }
 .brand-mark { color:var(--site-primary); font-size:30px; line-height:1; }
-.brand-name { font-family:var(--site-font-heading); font-size:29px; line-height:1; letter-spacing:-1px; }
+.brand-logo { display:block; width:56px; height:56px; flex:0 0 auto; object-fit:contain; }
+.brand-copy { display:grid; gap:4px; min-width:0; }
+.brand-name { font-family:var(--site-font-heading); font-size:clamp(18px,2vw,25px); line-height:1; letter-spacing:-.7px; white-space:nowrap; }
 .brand-tag { display:block; margin-top:4px; font-size:8px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; }
 .nav-links { display:flex; gap:clamp(12px,2vw,27px); align-items:center; font-size:13px; color:#55494a; }
 .nav-links a:hover { color:var(--site-primary); }
@@ -146,7 +148,8 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
   .nav { gap:10px; padding:12px 14px; }
   .brand { min-width:0; gap:7px; }
   .brand-mark { font-size:25px; flex:0 0 auto; }
-  .brand-name { display:block; font-size:clamp(19px,6vw,24px); line-height:1.05; letter-spacing:-.6px; overflow-wrap:anywhere; }
+  .brand-logo { width:46px; height:46px; }
+  .brand-name { display:block; font-size:clamp(14px,3.8vw,18px); line-height:1.05; letter-spacing:-.4px; overflow-wrap:anywhere; }
   .brand-tag { display:none; }
   .nav-links { flex:0 0 auto; min-width:0; gap:0; }
   .nav-links .button { white-space:nowrap; padding:10px 11px; }
@@ -182,6 +185,7 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
 @media(max-width:370px) {
   .nav { flex-wrap:wrap; }
   .brand { flex:1 1 100%; }
+  .brand-logo { width:44px; height:44px; }
   .nav-links { width:100%; }
   .nav-links .button { width:100%; }
   .service-grid { grid-template-columns:1fr; }
@@ -213,7 +217,7 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
 <body>
 <div id="app">
   <header class="nav">
-    <a class="brand" href="#home" aria-label="Bommis salon home" onclick="showHome()"><span class="brand-mark">❀</span><span><span class="brand-name">Salon Sevice At Home</span><span class="brand-tag">Beauty treatments at home</span></span></a>
+    <a class="brand" href="#home" aria-label="Bommis Salon Service At Home" onclick="showHome()"><img class="brand-logo" src="assets/bommis-logo-mark.png" alt="Bommis logo"><span class="brand-copy"><span class="brand-name">Bommis Salon Service At Home</span><span class="brand-tag">Beauty treatments at home</span></span></a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#home" onclick="showHome()">Home</a><a href="#services" onclick="showHome()">Services</a><a href="#about" onclick="showHome()">About</a><a href="#gallery" onclick="showHome()">Gallery</a><a href="#contact" onclick="showHome()">Contact</a>
       <button class="button" onclick="showBooking()">Book Now ↗</button>

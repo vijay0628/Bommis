@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover bridal makeup, salon services, saree draping and beauty services at Bommis Bridal Studio. Request your appointment online.">
+<meta name="description" content="Book waxing, facials, detan, bleach, pedicure and manicure services at Bommis Salon Service At Home.">
 <title>Bommis Salon Sevice At Home</title>
 <style>
 :root {
@@ -139,12 +139,60 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
 .mobile-menu { display:none; }
 @media(max-width:900px) { .nav-links { gap:12px; font-size:12px; } .service-grid { grid-template-columns:repeat(2,1fr); } .booking-layout { grid-template-columns:1fr; } .right-stack { position:static; } .hero { grid-template-columns:1fr 1fr; } .hero-copy { padding:35px; } }
 @media(max-width:650px) { .nav { padding:14px 18px; } .brand-name { font-size:25px; } .nav-links a:not(.button) { display:none; } .nav-links .button { padding:11px 13px; font-size:12px; } .hero { grid-template-columns:1fr; } .hero-copy { padding:42px 23px; } .hero-image { min-height:300px; } .trust-row { gap:11px; } .section { padding:48px 18px; } .service-grid { gap:11px; } .service-photo { height:130px; } .service-info { padding:13px; } .service-info h3 { font-size:18px; } .service-info p { font-size:12px; min-height:52px; } .price-row { font-size:13px; } .benefit-grid { grid-template-columns:1fr; gap:5px; } .gallery-grid { grid-template-columns:repeat(2,1fr); } .gallery-grid img { height:155px; } .cta-band { margin:0 18px 45px; flex-direction:column; align-items:flex-start; } .booking-layout { padding:23px 14px 45px; } .panel { padding:17px; } .category-grid { gap:4px; margin:13px 0 17px; } .category-tile { padding:10px 11px; font-size:12px; } .category-tile strong { font-size:12px; } .service-tools { grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:7px; } .booking-service { gap:9px; padding:9px; } .booking-service img { width:48px; height:48px; } .booking-service small { font-size:11px; } .booking-service .price { font-size:12px; } .form-grid { grid-template-columns:1fr; } .field.full { grid-column:auto; } footer { padding:28px 20px; } }
+
+/* Small-screen safeguards: prevent horizontal overflow and keep each control readable. */
+@media(max-width:520px) {
+  html, body { max-width:100%; overflow-x:hidden; }
+  .nav { gap:10px; padding:12px 14px; }
+  .brand { min-width:0; gap:7px; }
+  .brand-mark { font-size:25px; flex:0 0 auto; }
+  .brand-name { display:block; font-size:clamp(19px,6vw,24px); line-height:1.05; letter-spacing:-.6px; overflow-wrap:anywhere; }
+  .brand-tag { display:none; }
+  .nav-links { flex:0 0 auto; min-width:0; gap:0; }
+  .nav-links .button { white-space:nowrap; padding:10px 11px; }
+  h1 { font-size:clamp(36px,11vw,48px); }
+  .hero-copy { padding:36px 18px; }
+  .hero-image { min-height:250px; }
+  .section { padding:42px 14px; }
+  .section-head { margin-bottom:25px; }
+  .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .service-photo { height:115px; }
+  .service-info { padding:11px; }
+  .service-info h3 { font-size:17px; overflow-wrap:anywhere; }
+  .service-info p { min-height:0; margin-bottom:10px; }
+  .price-row { align-items:flex-start; flex-direction:column; gap:3px; }
+  .booking-hero { min-height:205px; padding:32px 18px; }
+  .booking-layout { padding:18px 10px 38px; gap:14px; }
+  .panel { padding:14px; border-radius:11px; }
+  .panel h2 { font-size:24px; }
+  .service-tools { grid-template-columns:1fr; }
+  .selection-count { flex-direction:column; gap:3px; }
+  .booking-service { align-items:flex-start; }
+  .booking-service img { width:44px; height:44px; }
+  .booking-service .price { margin-left:auto; padding-top:2px; }
+  .summary-line { align-items:flex-start; }
+  .summary-line span:first-child { min-width:0; overflow-wrap:anywhere; }
+  .cta-band { margin:0 14px 38px; padding:27px 20px; }
+  .cta-band .button { width:100%; }
+  footer { padding:26px 16px; }
+}
+@media(max-width:370px) {
+  .nav { flex-wrap:wrap; }
+  .brand { flex:1 1 100%; }
+  .nav-links { width:100%; }
+  .nav-links .button { width:100%; }
+  .service-grid { grid-template-columns:1fr; }
+  .service-photo { height:160px; }
+  .gallery-grid { grid-template-columns:1fr; }
+  .gallery-grid img { height:210px; }
+  .trust-row { display:grid; gap:7px; }
+}
 </style>
 </head>
 <body>
 <div id="app">
   <header class="nav">
-    <a class="brand" href="#home" aria-label="Bommis salon  home" onclick="showHome()"><span class="brand-mark">❀</span><span><span class="brand-name">Salon Sevice At Home</span><span class="brand-tag">Bridal beauty & styling</span></span></a>
+    <a class="brand" href="#home" aria-label="Bommis salon home" onclick="showHome()"><span class="brand-mark">❀</span><span><span class="brand-name">Salon Sevice At Home</span><span class="brand-tag">Beauty treatments at home</span></span></a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#home" onclick="showHome()">Home</a><a href="#services" onclick="showHome()">Services</a><a href="#about" onclick="showHome()">About</a><a href="#gallery" onclick="showHome()">Gallery</a><a href="#contact" onclick="showHome()">Contact</a>
       <button class="button" onclick="showBooking()">Book Now ↗</button>
@@ -152,8 +200,8 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
   </header>
   <main id="homePage">
     <section class="hero" id="home">
-      <div class="hero-copy"><div class="eyebrow">Bridal & beauty services</div><h1>Look Beautiful.<br>Feel Confident.</h1><p>Professional bridal makeup, salon treatments, saree draping and beauty services for weddings, celebrations, and every special occasion.</p><button class="button" onclick="showBooking()">Book your appointment <span>→</span></button><div class="trust-row"><span>Premium products</span><span>Hygienic & safe</span><span>Personalised looks</span></div></div>
-      <div class="hero-image"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85" alt="Beauty portrait representing a special occasion makeup look"></div>
+      <div class="hero-copy"><div class="eyebrow">Beauty services at home</div><h1>Look Beautiful.<br>Feel Confident.</h1><p>Professional waxing, facials, detan, bleach, pedicure and manicure services in the comfort of your home.</p><button class="button" onclick="showBooking()">Book your appointment <span>→</span></button><div class="trust-row"><span>Premium products</span><span>Hygienic & safe</span><span>Personalised care</span></div></div>
+      <div class="hero-image"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85" alt="Beauty treatment portrait"></div>
     </section>
     <section class="section" id="services"><div class="section-head"><div class="eyebrow">Our services</div><h2>Beauty for Every Occasion</h2><p>Choose a service that suits your style. Select one or more options to see your estimated total before requesting a booking.</p></div><div class="service-grid" id="serviceCards"></div></section>
     <section class="section benefits" id="about"><div class="section-head"><div class="eyebrow">Why choose Bommis Salon Sevice At Home</div><h2>Your Beauty, Our Passion</h2><p>A thoughtful, personalised experience from consultation to your final look.</p></div><div class="benefit-grid"><div class="benefit"><div class="benefit-icon">✧</div><h3>Experienced professionals</h3><p>Looks tailored to your occasion, style and preferences.</p></div><div class="benefit"><div class="benefit-icon">♡</div><h3>Personalised consultation</h3><p>Discuss your needs before the appointment so we can prepare.</p></div><div class="benefit"><div class="benefit-icon">✿</div><h3>Care in every detail</h3><p>Careful product selection and a comfortable beauty experience.</p></div></div></section>
@@ -164,78 +212,67 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
     <section class="booking-hero"><div><div class="eyebrow">Bommis Salon Service At Home</div><h1>What would you like to book?</h1><p>Choose a service category to explore treatments and prices, then request your preferred appointment.</p></div></section>
     <section class="booking-layout"><div><button class="back-link" onclick="showHome()">← Back to salon</button><div class="panel"><h2>Choose a category</h2><p class="panel-intro">Select a category below to view its services and prices.</p><div class="category-grid" id="categoryGrid" role="group" aria-label="Service categories"></div><div id="categoryServices"><h2 id="categoryTitle">Salon services</h2><p class="panel-intro" id="categoryIntro">Select one or more services.</p><div class="booking-services" id="bookingServices"></div></div></div></div>
       <aside class="right-stack"><div class="panel"><h2>Your selection</h2><div id="selectedSummary"><p class="panel-intro" style="margin-top:12px">Choose a service to begin.</p></div><div class="summary-line total"><span>Total estimate</span><span id="totalPrice">₹0</span></div></div>
-      <form class="panel" id="bookingForm"><h2>Your appointment</h2><p class="panel-intro">Your request is not confirmed until we contact you.</p><div class="form-grid"><div class="field full"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Enter your name" required></div><div class="field full"><label for="phone">WhatsApp / phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 98765 43210" pattern="[0-9+()\\s-]{8,18}" required></div><div class="field full"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="date">Preferred date *</label><input id="date" name="date" type="date" required></div><div class="field"><label for="time">Preferred time *</label><select id="time" name="time" required><option value="">Choose time</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option><option>06:00 PM</option></select></div><div class="field full" id="returnAddressField" hidden><label for="returnAddress">Address to return/post your saree *</label><textarea id="returnAddress" name="returnAddress" autocomplete="street-address" placeholder="House/flat, street, area, city, PIN code"></textarea><small class="slot-status">Required when booking saree draping or saree box pleating.</small></div><div class="field full"><label for="notes">Additional notes (optional)</label><textarea id="notes" name="notes" placeholder="Occasion, preferred look, venue, etc."></textarea></div></div><div class="error" id="formError" role="alert">Please select at least one service and complete the required fields.</div><button class="button checkout-button" type="submit">Send booking request via WhatsApp ↗</button><p class="notice">No payment is taken on this demo. We'll open WhatsApp with your request ready to send. Appointment timing and final price need confirmation.</p></form></aside>
+      <form class="panel" id="bookingForm"><h2>Your appointment</h2><p class="panel-intro">Your request is not confirmed until we contact you.</p><div class="form-grid"><div class="field full"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Enter your name" required></div><div class="field full"><label for="phone">WhatsApp / phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 98765 43210" pattern="[0-9+()\\s-]{8,18}" required></div><div class="field full"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label for="date">Preferred date *</label><input id="date" name="date" type="date" required></div><div class="field"><label for="time">Preferred time *</label><select id="time" name="time" required><option value="">Choose time</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option><option>06:00 PM</option></select></div><div class="field full"><label for="notes">Additional notes (optional)</label><textarea id="notes" name="notes" placeholder="Preferred service or any requirements"></textarea></div></div><div class="error" id="formError" role="alert">Please select at least one service and complete the required fields.</div><button class="button checkout-button" type="submit">Send booking request via WhatsApp ↗</button><p class="notice">No payment is taken on this demo. We'll open WhatsApp with your request ready to send. Appointment timing and final price need confirmation.</p></form></aside>
     </section>
   </main>
-  <footer><div><div class="brand"><span class="brand-mark">❀</span><span><span class="brand-name">Bommis Salon Sevice At Home</span><span class="brand-tag">Bridal beauty & styling</span></span></div><p>Beauty services for your special moments.</p></div><div><strong>Contact & appointments</strong><p><a href="mailto:bommisbridalstudio@gmail.com">bommisbridalstudio@gmail.com</a></p><p>28/20, Ramapuram Ramasamy Street,<br>Saidapet, Chennai - 15</p></div><div><strong>Hours</strong><p>By appointment · Please confirm availability</p><p>© <span id="year"></span> Bommis Salon Sevice At Home</p></div></footer>
+  <footer><div><div class="brand"><span class="brand-mark">❀</span><span><span class="brand-name">Bommis Salon Sevice At Home</span><span class="brand-tag">Beauty treatments at home</span></span></div><p>Beauty services in the comfort of your home.</p></div><div><strong>Contact & appointments</strong><p><a href="mailto:bommisbridalstudio@gmail.com">bommisbridalstudio@gmail.com</a></p><p>28/20, Ramapuram Ramasamy Street,<br>Saidapet, Chennai - 15</p></div><div><strong>Hours</strong><p>By appointment · Please confirm availability</p><p>© <span id="year"></span> Bommis Salon Sevice At Home</p></div></footer>
 </div>
 <script>
 const WHATSAPP_NUMBER = '919940148844'; // Business WhatsApp number, country code included
 const categories = [
- {id:'salon',name:'Salon services',description:'Waxing, facials, mani-pedi, hair care and more',icon:'✦'},
- {id:'saree',name:'Saree draping',description:'Traditional and occasion saree styling',icon:'❋'},
- {id:'bridal',name:'Bridal makeup',description:'Bridal and reception looks',icon:'♡'},
- {id:'makeup',name:'Party makeup',description:'Makeup for parties and special events',icon:'✧'},
- {id:'hair-style',name:'Hairstyling',description:'Elegant hairstyles for every occasion',icon:'❀'}
+ {id:'waxing',name:'Waxing',description:'Korean wax and Rica waxing',icon:'✦'},
+ {id:'facial',name:'Facials',description:'Glow, hydration, brightening and skin care',icon:'✧'},
+ {id:'detan',name:'Detan',description:'Face and body detan treatments',icon:'❋'},
+ {id:'bleach',name:'Bleach',description:'Face and body bleach treatments',icon:'♡'},
+ {id:'pedicure',name:'Pedicure',description:'Basic, detan and spa pedicures',icon:'❀'},
+ {id:'manicure',name:'Manicure',description:'Basic, detan and spa manicures',icon:'✿'}
 ];
 const services = [
-  {id:'rica-tin-full',name:'Rica tin wax — full arms & full legs (including underarm)',description:'Rica and Aquagel waxing options',price:1248.75,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'rica-rollon-full',name:'Rica roll-on wax — full arms & full legs (including underarm)',description:'Rica and Aquagel waxing options',price:1436.25,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'wax-arms',name:'Waxing — Full arms (including underarms)',description:'Waxing service; wax type confirmed at booking',price:769,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'wax-legs',name:'Waxing — Full legs',description:'Waxing service; wax type confirmed at booking',price:689,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'wax-half-legs',name:'Waxing — Half legs',description:'Wax type confirmed at booking',price:419,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'wax-back',name:'Waxing — Back',description:'Wax type confirmed at booking',price:699,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'wax-stomach',name:'Waxing — Stomach',description:'Wax type confirmed at booking',price:649,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'wax-full-body',name:'Waxing — Full body',description:'Wax type confirmed at booking',price:1699,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'facial-o3',name:'O3+ power brightening facial',description:'Brightening facial',price:2099,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'facial-shine',name:'O3+ shine & glow facial',description:'Glow facial',price:1849,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'facial-korean-glow',name:'Korean Glow facial',description:'Glow facial',price:1399,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'facial-wine',name:'Firming wine glow facial',description:'Firming glow facial',price:1349,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'foot-massage-10',name:'Foot massage (10 mins)',description:'Foot massage',price:249,category:'salon',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
-  {id:'foot-massage-20',name:'Foot massage (20 mins)',description:'Foot massage',price:499,category:'salon',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-color',name:'Hair color application',description:'Hair color application',price:399,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'henna',name:'Henna mehendi application',description:'Henna application',price:499,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'head-massage-10',name:'Head massage (10 mins)',description:'Head massage',price:249,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'head-massage-20',name:'Head massage (20 mins)',description:'Head massage',price:449,category:'salon',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'bleach-arms',name:'Bleach & detan — full arms',description:'Bleach service',price:549,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'detan-legs',name:'Bleach & detan — full legs',description:'Detan service',price:699,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'detan-back',name:'Bleach & detan — back',description:'Detan service',price:549,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'detan-chest',name:'Bleach & detan — chest',description:'Detan service',price:549,category:'salon',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-brow',name:'Threading — eyebrow',description:'Facial hair removal',price:59,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-lip',name:'Threading — upper lip',description:'Facial hair removal',price:59,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-forehead',name:'Threading — forehead',description:'Facial hair removal',price:59,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-sidelocks',name:'Threading — sidelocks',description:'Facial hair removal',price:49,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-chin',name:'Threading — chin',description:'Facial hair removal',price:49,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-jaw',name:'Facial hair removal — jawline',description:'Facial hair removal',price:99,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-neck',name:'Facial hair removal — neck',description:'Facial hair removal',price:199,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'thread-face',name:'Facial hair removal — face',description:'Facial hair removal',price:499,category:'salon',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'bridal',name:'Bridal Makeup',description:'Complete bridal makeover',price:8000,category:'bridal',image:'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=350&q=80'},
-  {id:'reception',name:'Reception Makeup',description:'Glamorous evening look',price:5000,category:'bridal',image:'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=350&q=80'},
-  {id:'party',name:'Party Makeup',description:'For weddings, receptions and events',price:3000,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair',name:'Hairstyling',description:'Elegant and modern hairstyles',price:1500,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'drape',name:'Saree draping',description:'Traditional and occasion saree styling',price:799,category:'saree',image:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=350&q=80'},
-  {id:'saree-box-pleating',name:'Saree box pleating',description:'Saree box pleating service',price:249,category:'saree',image:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=350&q=80'},
-  {id:'party-bronze',name:'Party makeup — Bronze package',description:'Basic-range products, basic hairstyle and makeover',price:1999,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
-  {id:'party-silver',name:'Party makeup — Silver package',description:'Professional products, good hairstyle, makeover and saree/lehenga draping',price:3999,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
-  {id:'party-gold',name:'Party makeup — Gold HD package',description:'HD products, advanced hairstyle, saree draping and makeover',price:5999,category:'makeup',image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-blow-dry',name:'Blow dry',description:'Professional blow-dry styling',price:599,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-temporary-straightening',name:'Temporary straightening',description:'Temporary straightened hairstyle',price:699,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-curls',name:'Curls',description:'Temporary curls styling',price:699,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-advance-curls',name:'Advanced curls',description:'Advanced curls hairstyle',price:999,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'haircut-basic',name:'Basic haircut',description:'Basic haircut service',price:249,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'haircut-advanced',name:'Advanced haircut',description:'Advanced haircut and styling',price:699,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-spa-mid',name:'Hair spa — up to mid length',description:'Hair spa for hair up to mid length',price:799,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'},
-  {id:'hair-spa-hip',name:'Hair spa — hip length',description:'Hair spa for hip-length hair',price:999,category:'hair-style',image:'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=350&q=80'}
+  {id:'korean-wax-full',name:'Korean wax — full arms, full legs & underarms',description:'Korean wax',price:799,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'rica-rollon-full',name:'Rica roll-on wax — full arms, full legs & underarms',description:'Rica roll-on wax',price:1249,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'rica-tin-full',name:'Rica tin wax — full arms, full legs & underarms',description:'Rica tin wax',price:899,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'korean-wax-arms',name:'Korean wax — arms',description:'Korean wax',price:499,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'korean-wax-legs',name:'Korean wax — legs',description:'Korean wax',price:499,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'rica-rollon-legs',name:'Rica roll-on wax — legs',description:'Rica roll-on wax',price:599,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'rica-rollon-arms',name:'Rica roll-on wax — arms',description:'Rica roll-on wax',price:649,category:'waxing',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'insta-glow-facial',name:'Insta glow facial',description:'Facial treatment',price:999,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'wine-glow-facial',name:'Wine glow facial',description:'Facial treatment',price:1099,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'tan-clear-facial',name:'Tan clear facial',description:'Facial treatment',price:1199,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'hydra-boost-facial',name:'Hydra boost facial',description:'Facial treatment',price:1599,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'vitamin-c-facial',name:'Vitamin C brightening facial',description:'Facial treatment',price:1799,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'korean-glass-skin',name:'Korean glass skin facial',description:'Facial treatment',price:1599,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'oxygen-facial',name:'Oxygen facial',description:'Facial treatment',price:1999,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'anti-ageing-argon',name:'Anti-ageing with argon',description:'Facial treatment',price:1499,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bio-brightening-tightening',name:'Bio brightening & tightening',description:'Facial treatment',price:2099,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'shine-glow-facial',name:'Shine & glow facial',description:'Facial treatment',price:1599,category:'facial',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-face-neck',name:'Detan — face & neck',description:'Detan treatment',price:449,category:'detan',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-arms',name:'Detan — arms',description:'Detan treatment',price:599,category:'detan',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-legs',name:'Detan — legs',description:'Detan treatment',price:599,category:'detan',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-back',name:'Detan — back',description:'Detan treatment',price:449,category:'detan',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-full-body',name:'Detan — full body',description:'Detan treatment',price:1399,category:'detan',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-face-neck',name:'Bleach — face & neck',description:'Bleach treatment',price:349,category:'bleach',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-arms',name:'Bleach — arms',description:'Bleach treatment',price:499,category:'bleach',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-legs',name:'Bleach — legs',description:'Bleach treatment',price:499,category:'bleach',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-back',name:'Bleach — back',description:'Bleach treatment',price:349,category:'bleach',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-full-body',name:'Bleach — full body',description:'Bleach treatment',price:1299,category:'bleach',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'bleach-full-body-moisturising',name:'Bleach — full body with moisturisation',description:'Bleach treatment',price:1599,category:'bleach',image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=350&q=80'},
+  {id:'basic-pedicure',name:'Basic pedicure',description:'Pedicure treatment',price:899,category:'pedicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-pedicure',name:'Detan pedicure',description:'Pedicure treatment',price:1099,category:'pedicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'spa-pedicure',name:'Spa pedicure',description:'Pedicure treatment',price:1099,category:'pedicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'basic-manicure',name:'Basic manicure',description:'Manicure treatment',price:799,category:'manicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'detan-manicure',name:'Detan manicure',description:'Manicure treatment',price:999,category:'manicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'spa-manicure',name:'Spa manicure',description:'Manicure treatment',price:1099,category:'manicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'},
+  {id:'mani-pedi-combo',name:'Manicure & pedicure combo',description:'Manicure and pedicure combo',price:1399,category:'manicure',image:'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=350&q=80'}
 ];
-const money = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(Math.round(n*0.8));
+const money = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n);
 const selected = new Set();
 let activeCategory = null;
 function showBooking(){ document.getElementById('homePage').hidden=true; document.getElementById('bookingPage').hidden=false; showCategories(); window.scrollTo({top:0,behavior:'smooth'}); }
 function showHome(){ document.getElementById('bookingPage').hidden=true; document.getElementById('homePage').hidden=false; window.scrollTo({top:0,behavior:'smooth'}); }
-function showCategories(){ activeCategory='salon'; document.getElementById('categoryGrid').hidden=false; document.getElementById('categoryServices').hidden=false; document.getElementById('categoryGrid').innerHTML=categories.map(c=>`<button type="button" class="category-tile ${c.id===activeCategory?'active':''}" aria-pressed="${c.id===activeCategory}" onclick="openCategory('${c.id}')"><span class="category-icon">${c.icon}</span><strong>${c.name}</strong></button>`).join(''); const category=categories.find(c=>c.id===activeCategory); document.getElementById('categoryTitle').textContent=category.name; document.getElementById('categoryIntro').textContent='Select one or more services. Prices are based on the supplied reference images and should be confirmed before launch.'; renderBookingServices(); }
-function openCategory(id){ activeCategory=id; const category=categories.find(c=>c.id===id); document.getElementById('categoryGrid').hidden=false; document.getElementById('categoryGrid').innerHTML=categories.map(c=>`<button type="button" class="category-tile ${c.id===activeCategory?'active':''}" aria-pressed="${c.id===activeCategory}" onclick="openCategory('${c.id}')"><span class="category-icon">${c.icon}</span><strong>${c.name}</strong></button>`).join(''); document.getElementById('categoryServices').hidden=false; document.getElementById('categoryTitle').textContent=category.name; document.getElementById('categoryIntro').textContent='Select one or more services. Prices are based on the supplied reference images and should be confirmed before launch.'; renderBookingServices(); renderSummary(); }
+function showCategories(){ activeCategory='waxing'; document.getElementById('categoryGrid').hidden=false; document.getElementById('categoryServices').hidden=false; document.getElementById('categoryGrid').innerHTML=categories.map(c=>`<button type="button" class="category-tile ${c.id===activeCategory?'active':''}" aria-pressed="${c.id===activeCategory}" onclick="openCategory('${c.id}')"><span class="category-icon">${c.icon}</span><strong>${c.name}</strong></button>`).join(''); const category=categories.find(c=>c.id===activeCategory); document.getElementById('categoryTitle').textContent=category.name; document.getElementById('categoryIntro').textContent='Select one or more services.'; renderBookingServices(); }
+function openCategory(id){ activeCategory=id; const category=categories.find(c=>c.id===id); document.getElementById('categoryGrid').hidden=false; document.getElementById('categoryGrid').innerHTML=categories.map(c=>`<button type="button" class="category-tile ${c.id===activeCategory?'active':''}" aria-pressed="${c.id===activeCategory}" onclick="openCategory('${c.id}')"><span class="category-icon">${c.icon}</span><strong>${c.name}</strong></button>`).join(''); document.getElementById('categoryServices').hidden=false; document.getElementById('categoryTitle').textContent=category.name; document.getElementById('categoryIntro').textContent='Select one or more services.'; renderBookingServices(); renderSummary(); }
 function renderCards(){
- document.getElementById('serviceCards').innerHTML=categories.slice(0,4).map(c=>{const s=services.find(x=>x.category===c.id);return `<article class="service-card"><div class="service-photo"><img src="${s?s.image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'}" alt="${c.name}" loading="lazy"></div><div class="service-info"><h3>${c.name}</h3><p>${c.description}</p><div class="price-row"><span class="price">${s?'From '+money(s.price):'View options'}</span><button class="small-link" onclick="showBooking();openCategory('${c.id}')">Explore →</button></div></div></article>`}).join('');
+ document.getElementById('serviceCards').innerHTML=categories.map(c=>{const s=services.find(x=>x.category===c.id);return `<article class="service-card"><div class="service-photo"><img src="${s?s.image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=350&q=80'}" alt="${c.name}" loading="lazy"></div><div class="service-info"><h3>${c.name}</h3><p>${c.description}</p><div class="price-row"><span class="price">${s?'From '+money(s.price):'View options'}</span><button class="small-link" onclick="showBooking();openCategory('${c.id}')">Explore →</button></div></div></article>`}).join('');
 }
 function setupSmartSelection(){
  const list=document.getElementById('bookingServices');
@@ -271,11 +308,7 @@ function renderSummary(){
  let notice=document.getElementById('minimumOrderNotice');
  if(!notice){notice=document.createElement('div');notice.id='minimumOrderNotice';notice.className='minimum-order-notice';notice.setAttribute('role','status');document.getElementById('totalPrice').closest('.summary-line').after(notice);}
  notice.classList.toggle('met',total>600);
- const displayedTotal=Math.round(total*0.8);
- sendButton.disabled=displayedTotal<=600;
- sendButton.setAttribute('aria-disabled',String(displayedTotal<=600));
- notice.classList.toggle('met',displayedTotal>600);
- notice.textContent=displayedTotal>600?'Minimum order requirement met. You can continue with your booking.':'Minimum order value must be more than ₹600. Add another service to continue.';
+ notice.textContent=total>600?'Minimum order requirement met. You can continue with your booking.':'Minimum order value must be more than ₹600. Add another service to continue.';
 }
 function addAndBook(id){ selected.add(id); renderBookingServices(); renderSummary(); showBooking(); }
 function updateAppointmentSlots(){
@@ -294,20 +327,16 @@ const timeField=document.getElementById('time').closest('.field'); const slotSta
 updateAppointmentSlots();
 document.getElementById('bookingForm').addEventListener('submit',function(event){
  const total=services.filter(s=>selected.has(s.id)).reduce((sum,s)=>sum+s.price,0);
- if(Math.round(total*0.8)<=600){event.preventDefault();event.stopImmediatePropagation();const err=document.getElementById('formError');err.textContent='Minimum order value must be more than ₹600. Please add another service before continuing.';err.style.display='block';document.getElementById('minimumOrderNotice').scrollIntoView({behavior:'smooth',block:'center'});}
+ if(total<=600){event.preventDefault();event.stopImmediatePropagation();const err=document.getElementById('formError');err.textContent='Minimum order value must be more than ₹600. Please add another service before continuing.';err.style.display='block';document.getElementById('minimumOrderNotice').scrollIntoView({behavior:'smooth',block:'center'});}
 },true);
 document.getElementById('bookingForm').addEventListener('submit',function(event){
  event.preventDefault(); const err=document.getElementById('formError');
  if(!selected.size || !this.reportValidity()){err.style.display='block';return;} err.style.display='none';
- const data=new FormData(this); const items=services.filter(s=>selected.has(s.id)); const total=items.reduce((sum,s)=>sum+s.price,0); const needsReturnAddress=items.some(s=>s.category==='saree');
- if(needsReturnAddress&&!String(data.get('returnAddress')||'').trim()){document.getElementById('returnAddress').setCustomValidity('Please enter the address for returning/posting your saree.');document.getElementById('returnAddress').reportValidity();return;} document.getElementById('returnAddress').setCustomValidity('');
- const message=`Hello Bommis Salon Sevice At Home! I'd like to request an appointment.\n\nName: ${data.get('fullName')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')||'Not provided'}\nDate: ${data.get('date')}\nTime: ${data.get('time')}\nServices: ${items.map(s=>s.name+' ('+money(s.price)+')').join(', ')}\nEstimated total: ${money(total)}\n${needsReturnAddress?'Saree return/postal address: '+data.get('returnAddress')+'\n':''}Notes: ${data.get('notes')||'None'}\n\nPlease confirm availability and final price.`;
+ const data=new FormData(this); const items=services.filter(s=>selected.has(s.id)); const total=items.reduce((sum,s)=>sum+s.price,0);
+ const message=`Hello Bommis Salon Sevice At Home! I'd like to request an appointment.\n\nName: ${data.get('fullName')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')||'Not provided'}\nDate: ${data.get('date')}\nTime: ${data.get('time')}\nServices: ${items.map(s=>s.name+' ('+money(s.price)+')').join(', ')}\nEstimated total: ${money(total)}\nNotes: ${data.get('notes')||'None'}\n\nPlease confirm availability and final price.`;
  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer');
 });
 const dateInput=document.getElementById('date'); const today=new Date(); dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split('T')[0];
-function updateReturnAddressField(){const needsAddress=services.some(s=>selected.has(s.id)&&s.category==='saree');const field=document.getElementById('returnAddressField');const input=document.getElementById('returnAddress');field.hidden=!needsAddress;input.required=needsAddress;if(!needsAddress)input.setCustomValidity('');}
-const originalRenderSummary=renderSummary;
-renderSummary=function(){originalRenderSummary();updateReturnAddressField();};
 document.getElementById('phone').value='';
 document.getElementById('date').addEventListener('change',updateAppointmentSlots);
 document.getElementById('year').textContent=new Date().getFullYear(); renderCards(); showCategories(); renderSummary();

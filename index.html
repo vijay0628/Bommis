@@ -167,9 +167,11 @@ footer p { color:#d4c2c2; margin:7px 0 0; }
   .panel h2 { font-size:24px; }
   .service-tools { grid-template-columns:1fr; }
   .selection-count { flex-direction:column; gap:3px; }
-  .booking-service { grid-template-columns:18px 44px minmax(0,1fr) auto; align-items:flex-start; gap:8px; }
-  .booking-service img { width:44px; height:44px; }
-  .booking-service .price { margin-left:0; padding-top:2px; }
+  .booking-service { grid-template-columns:18px 44px minmax(0,1fr); grid-template-areas:'check image details' 'check image price'; align-items:flex-start; gap:6px 8px; width:100%; max-width:100%; }
+  .booking-service input { grid-area:check; margin-top:6px; }
+  .booking-service img { grid-area:image; width:44px; height:44px; }
+  .booking-service .service-label { grid-area:details; min-width:0; overflow-wrap:anywhere; }
+  .booking-service .price { grid-area:price; justify-self:start; margin-left:0; padding-top:0; }
   .summary-line { align-items:flex-start; }
   .summary-line span:first-child { min-width:0; overflow-wrap:anywhere; }
   .cta-band { margin:0 14px 38px; padding:27px 20px; }
